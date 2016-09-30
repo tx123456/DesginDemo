@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/lay_draw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/colorPrimary"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            <android.support.design.widget.TabLayout
+                android:id="@+id/lay_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@color/colorPrimaryDark"
+                app:tabIndicatorColor="#ff0000"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabTextColor="@android:color/white" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn"
+                android:text="btn"/>
+        </LinearLayout>
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/lay_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:itemTextColor="@color/navigation_select"
+            app:itemIconTint="@color/navigation_select"
+            app:headerLayout="@layout/item_header"
+            app:menu="@menu/navagation" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
